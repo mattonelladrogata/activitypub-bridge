@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "activitypub-bridge"
+version = "0.1.0"
+description = "Give any RSS/Atom-publishing magazine a real, followable Fediverse presence — WebFinger discovery, a signed ActivityPub actor, and RSS-to-Note conversion — without running a Mastodon instance."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Jacopo Antonelli Drago" }]
+requires-python = ">=3.9"
+dependencies = ["cryptography>=41.0", "feedparser>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["activitypub_bridge*"]
